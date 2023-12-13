@@ -3,7 +3,7 @@ import { nigerianStates } from "../data";
 
 export const PersonalInfo = ({ onNext }) => {
   return (
-    <form className="flex flex-col mt-10">
+    <form className="flex flex-col mt-10 z-[999]">
       <label
         htmlFor="name"
         className="flex flex-col gap-3 font-bold text-[12px] lg:text-[16px]"

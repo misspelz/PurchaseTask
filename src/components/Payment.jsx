@@ -25,15 +25,15 @@ export const Payment = () => {
 
   return (
     <div className="relative">
-      <img src="./images/bg.png" alt="bg_image" />
+      <img src="./images/bg.png" alt="bg_image" className="w-full h-full object-cover" />
       {!purchase && (
-        <div className="absolute top-20 flex flex-col justify-center items-center w-full bg-green-500">
-          <div className="bg-red-500 w-[90%] md:w-[60%] lg:w-[60%] relative">
+        <div className="absolute top-20 flex flex-col justify-center items-center w-full z-20">
+          <div className="bg-red-500 w-[90%] md:w-[60%] lg:w-[60%] relative z-10">
             <h2 className="text-purple text-[18px] md:text-[24px] lg:text-[30px] font-bold text-center md:text-left">
               Complete your Purchase
             </h2>
 
-            <div className="flex flex-col md:flex-row justify-between mt-2 md:mt-10">
+            <div className="flex flex-col md:flex-row justify-between mt-2 md:mt-10 z-10">
               {Array.from({ length: 3 }, (_, index) => (
                 <div
                   key={index}
@@ -72,7 +72,7 @@ export const Payment = () => {
         </div>
       )}
 
-      <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center w-full">
+      <div className="absolute top-40 flex flex-col justify-center items-center w-full z-30">
         {purchase && <Purchase />}
       </div>
     </div>
